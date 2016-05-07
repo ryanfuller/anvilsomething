@@ -79,11 +79,11 @@
 			scene.add(camera);
 
 			groundMaterial = new THREE.MeshPhongMaterial( { color: 0xdddddd, specular: 0x0f0f0f, shininess: 30, shading: THREE.FlatShading } );
-			var ground =new THREE.Mesh(new THREE.PlaneGeometry(1000,1000),groundMaterial);
-			ground.rotation.set((3*Math.PI)/2,0,0);
-			ground.position.set(0,-5,0);
+			//var ground =new THREE.Mesh(new THREE.PlaneGeometry(1000,1000),groundMaterial);
+			//ground.rotation.set((3*Math.PI)/2,0,0);
+			//ground.position.set(0,-5,0);
 			
-			scene.add(ground);
+			//scene.add(ground);
 
 			var clawHit = new THREE.Mesh(new THREE.SphereGeometry(3),new THREE.MeshBasicMaterial({transparent: true, opacity: 0}));
 			scene.add(clawHit);
