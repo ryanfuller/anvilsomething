@@ -186,16 +186,16 @@
 					shooters[i].position.z = 40* Math.sin(-shootersPos[i]);
 				};
 				for (var i = balls.length - 1; i >= 0; i--) {
-					//balls[i].position.x = balls[i].position.x*0.9999;
-					//balls[i].position.z = balls[i].position.z*0.9999;
-					/*if(balls[i].position.distanceTo(loseHit.position) < 5+3){
+					balls[i].position.x = balls[i].position.x*0.9999;
+					balls[i].position.z = balls[i].position.z*0.9999;
+					if(balls[i].position.distanceTo(loseHit.position) < 5+3){
 						scene.remove(balls[i]);
 						balls.splice(i,1);
 						//console.printline("aaa");
 					}else if(balls[i].position.distanceTo(clawHit.position) < 6){
 						scene.remove(balls[i]);
 						balls.splice(i,1);
-					}*/
+					}
 				
 				};
 				
