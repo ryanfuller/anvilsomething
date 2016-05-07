@@ -39,7 +39,7 @@
 			var geometry = new THREE.BoxGeometry(1,1,1);
 			var material = new THREE.MeshPhongMaterial();
 
-			controls = new THREE.OrbitControls(camera);
+			//controls = new THREE.OrbitControls(camera);
 			var claw = new THREE.Mesh();
 			var loader = new THREE.JSONLoader();
 			loader.load('claw.js',function(geo){
@@ -167,7 +167,7 @@
 	        var text2 = document.createElement('div');
 			text2.style.position = 'absolute';
 			//text2.style.zIndex = 1;    // if you still don't see the label, try uncommenting this
-			text2.style.width = 100;
+			text2.style.width = 200;
 			text2.style.height = 100;
 			text2.style.top = window.innerHeight/8 + 'px';
 			text2.style.left = window.innerWidth/8 + 'px';
@@ -213,7 +213,7 @@
 				};
 				
 				requestAnimationFrame(render);
-				controls.update();
+				//controls.update();
 				renderer.render(scene,camera);
 			};
 
