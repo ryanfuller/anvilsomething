@@ -47,6 +47,16 @@
 				scene.add(claw);
 			});
 
+			loader.load('robot.js',function(geo){
+				var robot = new THREE.Mesh(geo,material);
+				scene.add(robot);
+			});
+
+			loader.load('land.js',function(geo){
+				var land = new THREE.Mesh(geo,material);
+				scene.add(land);
+			});
+
 			light = new THREE.DirectionalLight(0xffffff);
 		    light.position.set(0, 100, 60);
 		    light.castShadow = true;
