@@ -61,7 +61,7 @@
 
 			loader.load('land.js',function(geo){
 				var land = new THREE.Mesh(geo,groundMaterial);
-				robot.scale.set(1.1,1.1,1.1);
+				land.scale.set(1.1,1.1,1.1);
 				land.position.y = 15;
 				scene.add(land);
 			});
