@@ -124,7 +124,8 @@
 
 	                case 32: // space
 	                	var newball = new THREE.Mesh(new THREE.SphereGeometry(3),material);
-	                    //newball.position.set(shooters[0].position);
+	                    newball.position.x = shooters[0].position.x;
+	                    newball.position.z = shooters[0].position.z;
 	                    balls.push(newball);
 	                    scene.add(newball);
 	                }
