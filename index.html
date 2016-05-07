@@ -75,9 +75,9 @@
 			
 			scene.add(ground);
 
-			var clawHit = new THREE.Mesh(new THREE.SphereGeometry(3),material);
+			var clawHit = new THREE.Mesh(new THREE.SphereGeometry(3),null);
 			scene.add(clawHit);
-			var loseHit = new THREE.Mesh(new THREE.SphereGeometry(5),material);
+			var loseHit = new THREE.Mesh(new THREE.SphereGeometry(5),null);
 			scene.add(loseHit);
 
 /////////////////////////////////////////////////////////////////
@@ -124,7 +124,7 @@
 
 	                case 32: // space
 	                	var newball = new THREE.Mesh(new THREE.SphereGeometry(3),material);
-	                    newball.position.set(shooters[0].position.x,shooters[0].position.y,shooters[0].position.z);
+	                    newball.position.set(shooters[0].position);
 	                    balls.push(newball);
 	                    scene.add(newball);
 	            }
