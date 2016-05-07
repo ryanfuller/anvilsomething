@@ -75,7 +75,7 @@
 			
 			scene.add(ground);
 
-			var clawHit = new THREE.Mesh(new THREE.SphereGeometry(3),new THREE.MeshBasicMaterial({transparent: true, opacity: 1}));
+			var clawHit = new THREE.Mesh(new THREE.SphereGeometry(3),new THREE.MeshBasicMaterial({transparent: true, opacity: 0}));
 			scene.add(clawHit);
 			var loseHit = new THREE.Mesh(new THREE.SphereGeometry(5));
 			scene.add(loseHit);
@@ -164,7 +164,17 @@
 
 
 
+	        var text2 = document.createElement('div');
+			text2.style.position = 'absolute';
+			//text2.style.zIndex = 1;    // if you still don't see the label, try uncommenting this
+			text2.style.width = 100;
+			text2.style.height = 100;
+			text2.style.backgroundColor = "blue";
+			text2.style.top = window.innerHeight/4 + 'px';
+			text2.style.left = window.innerWidth/4 + 'px';
+			document.body.appendChild(text2);
 
+			
 
 	        camera.rotation.x = -Math.PI/2;
 	        camera.rotation.z = -3*Math.PI/2;
@@ -179,6 +189,7 @@
 			var lives;
 
 			function render(){
+				text2.innerHTML = "score: " +score+ " lives: " + lives;
 				clawHit.position.x = 15 * Math.cos(clawRotation);
 	            clawHit.position.z = 15 * Math.sin(-clawRotation);
 				claw.rotation.y = clawRotation;
