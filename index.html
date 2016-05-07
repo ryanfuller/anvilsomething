@@ -38,6 +38,7 @@
 
 			var geometry = new THREE.BoxGeometry(1,1,1);
 			var material = new THREE.MeshPhongMaterial();
+			groundMaterial = new THREE.MeshPhongMaterial( { color: 0xdddddd, specular: 0x0f0f0f, shininess: 30, shading: THREE.FlatShading } );
 
 			//controls = new THREE.OrbitControls(camera);
 			var claw = new THREE.Mesh();
@@ -53,7 +54,8 @@
 			});
 
 			loader.load('land.js',function(geo){
-				var land = new THREE.Mesh(geo,material);
+				var land = new THREE.Mesh(geo,groundMaterial);
+				land.position.y = 30;
 				scene.add(land);
 			});
 
@@ -69,7 +71,7 @@
 		    light.shadowBias = -.0001
 		    light.shadowMapWidth = light.shadowMapHeight = 1024;
 		    light.shadowDarkness = .7;
-		    light.position.set(-80,80,80);
+		    light.position.set(-80,80,-80);
 			scene.add(light);
 					
 			var time = 0;
@@ -78,7 +80,7 @@
 			
 			scene.add(camera);
 
-			groundMaterial = new THREE.MeshPhongMaterial( { color: 0xdddddd, specular: 0x0f0f0f, shininess: 30, shading: THREE.FlatShading } );
+			
 			//var ground =new THREE.Mesh(new THREE.PlaneGeometry(1000,1000),groundMaterial);
 			//ground.rotation.set((3*Math.PI)/2,0,0);
 			//ground.position.set(0,-5,0);
@@ -87,7 +89,7 @@
 
 			var clawHit = new THREE.Mesh(new THREE.SphereGeometry(3),new THREE.MeshBasicMaterial({transparent: true, opacity: 0}));
 			scene.add(clawHit);
-			var loseHit = new THREE.Mesh(new THREE.SphereGeometry(5));
+			var loseHit = new THREE.Mesh(new THREE.SphereGeometry(5),new THREE.MeshBasicMaterial({transparent: true, opacity: 0}));
 			scene.add(loseHit);
 
 /////////////////////////////////////////////////////////////////
