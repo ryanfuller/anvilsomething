@@ -40,7 +40,7 @@
 			var material =  new THREE.MeshPhongMaterial( { color: 0xdddddd, specular: 0x009900, shininess: 30, shading: THREE.SmoothShading} ) 
 			groundMaterial = new THREE.MeshPhongMaterial( { color: 0xdddddd, specular: 0x0f0f0f, shininess: 30, shading: THREE.FlatShading } );
 
-			//controls = new THREE.OrbitControls(camera);
+			controls = new THREE.OrbitControls(camera);
 			var claw = new THREE.Mesh();
 			var loader = new THREE.JSONLoader();
 			loader.load('claw.js',function(geo){
@@ -75,7 +75,7 @@
 			scene.add(light);
 			
 			light2 = new THREE.PointLight(0xffffff, 1 );
-			light2.position.set(50,50,10);
+			light2.position.set(50,50,50);
 			scene.add(light2);
 
 			var time = 0;
@@ -229,7 +229,7 @@
 				};
 				
 				requestAnimationFrame(render);
-				//controls.update();
+				controls.update();
 				renderer.render(scene,camera);
 			};
 
