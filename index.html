@@ -175,7 +175,8 @@
 				scene.add(shooters[i]);
 			};
 
-
+			var score;
+			var lives;
 
 			function render(){
 				clawHit.position.x = 15 * Math.cos(clawRotation);
@@ -186,13 +187,15 @@
 					shooters[i].position.z = 40* Math.sin(-shootersPos[i]);
 				};
 				for (var i = balls.length - 1; i >= 0; i--) {
-					balls[i].position.x = balls[i].position.x*0.9999;
-					balls[i].position.z = balls[i].position.z*0.9999;
+					balls[i].position.x = balls[i].position.x*0.99;
+					balls[i].position.z = balls[i].position.z*0.99;
 					if(balls[i].position.distanceTo(loseHit.position) < 5+3){
+						lives -=1;
 						scene.remove(balls[i]);
 						balls.splice(i,1);
 						//console.printline("aaa");
 					}else if(balls[i].position.distanceTo(clawHit.position) < 6){
+						score +=1;
 						scene.remove(balls[i]);
 						balls.splice(i,1);
 					}
