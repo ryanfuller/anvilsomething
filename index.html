@@ -76,7 +76,6 @@
 			scene.add(ground);
 
 			var clawHit = new THREE.Mesh(new THREE.SphereGeometry(3),material);
-			clawHit.position.x =  15;
 			scene.add(clawHit);
 			var loseHit = new THREE.Mesh(new THREE.SphereGeometry(5),material);
 			scene.add(loseHit);
@@ -206,12 +205,9 @@
 
 			render();
 			function onWindowResize() {
-
 				camera.aspect = window.innerWidth / window.innerHeight;
 				camera.updateProjectionMatrix();
-				
 				renderer.setSize( window.innerWidth, window.innerHeight );
-
 			}
 
 
