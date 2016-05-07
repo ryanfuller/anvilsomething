@@ -75,7 +75,7 @@
 			
 			scene.add(ground);
 
-			var clawHit = new THREE.Mesh(new THREE.SphereGeometry(3));
+			var clawHit = new THREE.Mesh(new THREE.SphereGeometry(3),new THREE.MeshBasicMaterial({transparent: true, opacity: 1}));
 			scene.add(clawHit);
 			var loseHit = new THREE.Mesh(new THREE.SphereGeometry(5));
 			scene.add(loseHit);
