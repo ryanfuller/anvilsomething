@@ -81,16 +81,17 @@
 		    light.position.set(-80,80,-80);
 			//scene.add(light);
 			
-			light2 = new THREE.PointLight(0xffffff, 1 );
+			light2 = new THREE.PointLight(0xff3300, 1 );
 			light2.position.set(50,50,50);
 			scene.add(light2);
-			var ambient = new THREE.AmbientLight( 0xff3300 );
+			var ambient = new THREE.AmbientLight( 0xffffff );
 			scene.add( ambient );
 
 			camera.position.set(0,-2,10);
 			
 			scene.add(camera);
 
+			
 			
 			//var ground =new THREE.Mesh(new THREE.PlaneGeometry(1000,1000),groundMaterial);
 			//ground.rotation.set((3*Math.PI)/2,0,0);
