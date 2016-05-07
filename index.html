@@ -74,7 +74,9 @@
 		    light.position.set(-80,80,-80);
 			scene.add(light);
 			
-			scene.add(new THREE.PointLight(0xffffff, 1 ));
+			light2 = new THREE.PointLight(0xffffff, 1 );
+			light2.position.set(0,20,10);
+			scene.add(light2);
 
 			var time = 0;
 
