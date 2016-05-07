@@ -190,6 +190,7 @@
 					if(balls[i].position.distanceTo(loseHit.position) < 5+3){
 						scene.remove(balls[i]);
 						balls.splice(i,1);
+						console.printline("aaa");
 					}
 					if(balls[i].position.distanceTo(clawHit.position) < 6){
 						scene.remove(balls[i]);
