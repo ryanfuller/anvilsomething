@@ -1,11 +1,14 @@
-<html>
+<html lang = "en">
 	<head>
 		<title>
 			Claw Game
 		</title>
 		<style type="text/css">
 			BODY{
-				margin:0;
+				font-family: Monospace;
+				background-color: #000;
+				color: #fff;
+				margin: 0px;
 				overflow: hidden;
 			}
 			canvas{
@@ -17,6 +20,8 @@
 	<body>
 		<script src="three.js-master/three.js-master/build/three.js"></script>
 		<script src="three.js-master/three.js-master/examples/js/controls/OrbitControls.js"></script>
+		<script src="three.js-master/three.js-master/examples/js/shaders/UnpackDepthRGBAShader.js"></script>
+		<script src="three.js-master/three.js-master/examples/js/utils/ShadowMapViewer.js"></script>
 		<script src="three.js-master/three.js-master/examples/js/controls/PointerLockControls.js"></script>
 		<script>
 			//set up shit
