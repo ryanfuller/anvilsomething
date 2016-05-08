@@ -50,11 +50,15 @@
 			var loader = new THREE.JSONLoader();
 			loader.load('claw.js',function(geo){
 				claw = new THREE.Mesh(geo,material);
+				claw.castShadow = true;
+				claw.receiveShadow = true;
 				scene.add(claw);
 			});
 
 			loader.load('robot.js',function(geo){
 				var robot = new THREE.Mesh(geo,material);
+				robot.castShadow = true;
+				robot.receiveShadow = true;
 				robot.scale.set(1.2,1.2,1.2);
 				scene.add(robot);
 			});
@@ -62,6 +66,8 @@
 			loader.load('land.js',function(geo){
 				var land = new THREE.Mesh(geo,groundMaterial);
 				land.scale.set(1.1,1.1,1.1);
+				land.castShadow = true;
+				land.receiveShadow = true;
 				land.position.y = 15;
 				scene.add(land);
 			});
