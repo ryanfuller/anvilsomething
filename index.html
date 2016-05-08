@@ -99,7 +99,7 @@
 
 			light2 = new THREE.SpotLight( 0xffffff, 1, 0, Math.PI / 2 );
 			light2.position.set( 20,0,0 );
-			light2.target.position.set( 0, 0, 0 );
+			light2.target.position.set( -20, -20, -20 );
 			light2.castShadow = true;
 			light2.shadow = new THREE.LightShadow( new THREE.PerspectiveCamera( 50, 1, 1200, 2500 ) );
 			light2.shadow.bias = 0.0001;
