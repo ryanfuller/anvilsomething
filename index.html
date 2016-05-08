@@ -34,6 +34,8 @@
 			renderer.shadowMapSoft = true;
 			renderer.shadowMapType = THREE.PCFShadowMap;
 			renderer.shadowMapAutoUpdate = true;
+			renderer.setClearColorHex( 0x61DDFF, 1 );
+
 
 			renderer.setPixelRatio(window.devicePixelRatio);
 			renderer.setSize(window.innerWidth,window.innerHeight);
@@ -42,7 +44,7 @@
 			window.addEventListener('resize', onWindowResize, false);
 
 			var geometry = new THREE.BoxGeometry(1,1,1);
-			var material =  new THREE.MeshPhongMaterial( { color: 0xdddddd, specular: 0x009900, shininess: 30, shading: THREE.SmoothShading} ) 
+			var material =  new THREE.MeshPhongMaterial( { color: 0xdddddd, specular: 0xffffff, shininess: 30, shading: THREE.SmoothShading} ) 
 			groundMaterial = new THREE.MeshPhongMaterial( { color: 0xdddddd, specular: 0x0f0f0f, shininess: 30, shading: THREE.FlatShading } );
 
 			controls = new THREE.OrbitControls(camera);
